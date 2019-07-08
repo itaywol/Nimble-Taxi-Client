@@ -3,12 +3,12 @@ FROM node:10-alpine as builder
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
-run apk --no-cache add python make g++
+RUN apk --no-cache add python make g++ --silent
 
 
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --silent
 
 
 FROM node:10-alpine
