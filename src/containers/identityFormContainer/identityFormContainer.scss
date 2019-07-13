@@ -1,0 +1,39 @@
+#phoneForm{
+
+    h4{
+        color:gray;
+    }
+
+    p{
+        width:70%;
+        margin: 0 auto;
+
+    }
+
+    input{
+        display:block;
+        border:0;
+        border-bottom:1px solid gray;
+        margin:30px auto;
+        outline:none;
+    }
+
+    #confirm{
+        font-weight: bold;
+        color:white;
+        display:block;
+        width:60%;
+        height:50px;
+        margin: 0 auto;
+        border:none;
+        box-shadow: 4px 3px 8px 1px rgba(0,0,0,0.16);
+        border-radius:15px;
+        background-color: #00FF00;
+        outline:none;
+
+    }
+
+    #confirm:active{
+        background-color:#44FF44;
+    }
+}

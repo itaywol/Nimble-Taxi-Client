@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from '../../logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import indexPage from "../index/index"
+import identitySetup from "../identity/identity";
+
 
 const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Here!!!!!!
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route path="/" exact component={indexPage} />
+      <Route path="/identity" component={identitySetup} />
+    </Router>
+    
   );
 }
 
