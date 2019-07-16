@@ -2,11 +2,9 @@
   width: 80%;
   margin: 50px auto;
   text-align: center; }
-
-#wrapper img {
-  margin: 0 auto;
-  width: 75%;
-  display: block; }
-
-#wrapper h3 {
-  letter-spacing: 3px; }
+  #wrapper img {
+    margin: 0 auto;
+    width: 75%;
+    display: block; }
+  #wrapper h3 {
+    letter-spacing: 3px; }

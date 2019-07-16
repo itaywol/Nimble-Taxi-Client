@@ -2,6 +2,7 @@
 
     h4{
         color:gray;
+        padding:50px;
     }
 
     p{
@@ -12,8 +13,9 @@
 
     input{
         display:block;
-        border:0;
+        border:none;
         border-bottom:1px solid gray;
+        border-radius: none;
         margin:30px auto;
         outline:none;
     }
@@ -27,7 +29,7 @@
         margin: 0 auto;
         border:none;
         box-shadow: 4px 3px 8px 1px rgba(0,0,0,0.16);
-        border-radius:15px;
+        border-radius:5px;
         background-color: #00FF00;
         outline:none;
 
