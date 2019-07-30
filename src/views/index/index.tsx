@@ -1,10 +1,15 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
+import NimbleNav from "../../components/navbar/navbar";
+import NimbleMap from "../../components/googlemap/NimbleMap";
 
 class IndexPage extends React.Component {
   appView = () => {
-    return <React.Fragment>hey</React.Fragment>;
-  };
+    return <React.Fragment>
+      <NimbleNav></NimbleNav>
+      <NimbleMap></NimbleMap>
+    </React.Fragment>
+  }
 
   /* 
     checks if there is user token registered on the browser localstorage if do move to the appview if not go to identity form(phone verfication)

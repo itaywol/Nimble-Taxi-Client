@@ -21,12 +21,10 @@ export default class IdentityRegistrationController extends React.Component {
   handleCodeSubmit = (e: any) => {
     if (e) e.preventDefault();
     axios
-      .get(`/phone/${this.state.phoneNumber}/${this.state.code}`)
+      .post(`http://localhost:3001/auth/verify`,{phoneNumber:this.state.phoneNumber,code:this.state.code})
       .then(response => {
-        let result = JSON.stringify(response.data);
-        console.log(result);
-        if (result === "[true]") {
-          localStorage.setItem("accessToken", result);
+        if (response.data.ok === "1") {
+          localStorage.setItem("accessToken", response.data.ok);
           this.setState({ redirect: 2 });
         } else {
         }
@@ -39,7 +37,7 @@ export default class IdentityRegistrationController extends React.Component {
   handlePhoneSubmit = (e: any) => {
     if (e) e.preventDefault();
     axios
-      .post("/phone", { phoneNumber: this.state.phoneNumber })
+      .post("http://localhost:3001/auth/register", { phoneNumber: this.state.phoneNumber })
       .then(response => {
         this.setState({ redirect: 1 });
       })
@@ -99,7 +97,7 @@ export default class IdentityRegistrationController extends React.Component {
       return this.fillVerifyCodeForm();
     } else if (
       this.state.redirect === 2 ||
-      localStorage.getItem("accessToken") === "[true]"
+      localStorage.getItem("accessToken") === "1"
     ) {
       return <Redirect to="/" />;
     }

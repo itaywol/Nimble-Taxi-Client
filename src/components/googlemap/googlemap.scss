@@ -1,0 +1,25 @@
+.requestATaxi {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 50px;
+    z-index: 1;
+    border: none;
+    background-color: #00FF00;
+    padding: 5vh;
+    border-radius: 20px;
+}
+
+.requestATaxi:hover {
+    -webkit-box-shadow: 10px 10px 14px -10px rgba(130, 130, 130, 1);
+    -moz-box-shadow: 10px 10px 14px -10px rgba(130, 130, 130, 1);
+    box-shadow: 10px 10px 14px -10px rgba(130, 130, 130, 1);
+}
+
+.requestATaxi:focus {
+    outline: none;
+}
+
+.requestATaxi:active {
+    background-color: rgb(42, 190, 42);
+}
